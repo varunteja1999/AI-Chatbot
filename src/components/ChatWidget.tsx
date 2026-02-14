@@ -5,7 +5,7 @@ export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Array<{role: string, text: string}>>([
-    { role: "ai", text: "Hi! I'm Alex's AI Assistant. Ask me about his projects or skills!" }
+    { role: "ai", text: "Hi! I'm Varun's AI Assistant. Ask me about his projects or skills!" }
   ]);
   const [loading, setLoading] = useState(false);
   const [metrics, setMetrics] = useState<any>(null); // For Research Data
