@@ -4,7 +4,7 @@ import ChatWidget from "../components/ChatWidget";
 // 1. Import the new component
 
 export const metadata: Metadata = {
-  title: "Alex's AI Portfolio",
+  title: "Varun's AI Portfolio",
   description: "Cost-aware AI research project",
 };
 
