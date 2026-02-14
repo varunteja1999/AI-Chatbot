@@ -1,29 +1,25 @@
 "use client";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <span className="font-bold text-2xl text-blue-600">DevPortfolio</span>
-          </div>
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="#home" className="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium text-gray-700">Home</Link>
-              <Link href="#about" className="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium text-gray-700">About</Link>
-              <Link href="#projects" className="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium text-gray-700">Projects</Link>
-              <Link href="#contact" className="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium text-gray-700">Contact</Link>
-            </div>
-          </div>
+    <motion.nav 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} // Apple-like easing curve
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-fit bg-zinc-900/50 backdrop-blur-2xl border border-white/10 rounded-full px-8 py-4 shadow-2xl"
+    >
+      <div className="flex items-center gap-10 text-sm font-medium text-zinc-400">
+        <Link href="#home" className="text-white font-bold text-lg tracking-tighter">VT.</Link>
+        
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8">
+          <Link href="#about" className="hover:text-white transition-colors">About</Link>
+          <Link href="#projects" className="hover:text-white transition-colors">Projects</Link>
+          <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

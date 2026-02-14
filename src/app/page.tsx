@@ -6,16 +6,16 @@ import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-zinc-950 text-white selection:bg-cyan-500/30 overflow-hidden">
       <Navbar />
       <Hero />
       <About />
       <Projects />
       <Contact />
       
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 text-center">
-        <p>© 2026 DevPortfolio. Built with Next.js & Gemini.</p>
+      {/* Sleek Minimalist Footer */}
+      <footer className="border-t border-white/10 py-8 text-center text-zinc-500 text-sm">
+        <p>© 2026 DevPortfolio. Engineered by Sai Varun Teja.</p>
       </footer>
     </main>
   );
